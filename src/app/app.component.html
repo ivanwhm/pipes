@@ -1,6 +1,19 @@
-<div>
-  <label>Payee Name</label>
-  <input (input)="onNameChange($event.target.value)" type="text" />
+<div class="container">
+  <h3>Payment Form</h3>
+  <div class="row">
+    <div class="form-group col">
+      <label>Payee Name</label>
+      <input
+        (input)="onNameChange($event.target.value)"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="col">
+      <label><strong>Name</strong></label>
+      <div>
+        {{ name | titlecase }}
+      </div>
+    </div>
+  </div>
 </div>
-
-{{ name | titlecase }}
