@@ -1,5 +1,6 @@
 <div class="container">
   <h3>Payment Form</h3>
+
   <div class="row">
     <div class="form-group col">
       <label>Payee Name</label>
@@ -10,9 +11,26 @@
       />
     </div>
     <div class="col">
-      <label><strong>Name</strong></label>
+      <label><strong>Payee Name</strong></label>
       <div>
         {{ name | titlecase }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date</label>
+      <input
+        (input)="onDateChange($event.target.value)"
+        type="date"
+        class="form-control"
+      />
+    </div>
+    <div class="col">
+      <label><strong>Payment Date</strong></label>
+      <div>
+        {{ date }}
       </div>
     </div>
   </div>
