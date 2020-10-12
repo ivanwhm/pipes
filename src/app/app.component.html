@@ -51,4 +51,21 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payee Height</label>
+      <input
+        (input)="onHeightChange($event.target.value)"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="col">
+      <label><strong>Payee Height</strong></label>
+      <div>
+        {{ height | number: "1.0-0" }}
+      </div>
+    </div>
+  </div>
 </div>
